@@ -2,6 +2,8 @@ package edu.hrbeu.blog.mapper;
 
 import edu.hrbeu.blog.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
