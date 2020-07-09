@@ -30,5 +30,6 @@
     <mvc:annotation-driven/>
 
 
+    <mvc:resources mapping="/layui/**" location="/static/layui/"></mvc:resources>
 
 </beans>

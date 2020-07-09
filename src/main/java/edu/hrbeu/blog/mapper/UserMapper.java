@@ -1,10 +1,7 @@
 package edu.hrbeu.blog.mapper;
 
 import edu.hrbeu.blog.entity.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.ResultType;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -28,6 +25,8 @@ public interface UserMapper {
      * @param user
      * @return 影响行数
      */
+
+
     int update(User user);
 
     User getUserById(Integer userId);
@@ -37,6 +36,7 @@ public interface UserMapper {
 
     User getUserByNameOrEmail(String str);
 
+    @Select("Select * from user where user_name = #{str}")
     User getUserByName(String str);
 
     User getUserByEmail(String str);

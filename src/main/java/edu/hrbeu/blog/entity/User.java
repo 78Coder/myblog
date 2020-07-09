@@ -4,11 +4,12 @@ import lombok.Data;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @Component
-public class User {
+public class User implements Serializable {
 
 
     private Integer userId;
